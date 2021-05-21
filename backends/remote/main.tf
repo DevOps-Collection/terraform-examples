@@ -5,7 +5,7 @@ terraform {
   required_version = ">= 0.14.0"
   required_providers {
     aws = {
-      source = "hashicorp/aws"
+      source  = "hashicorp/aws"
       version = "3.42.0"
     }
   }
@@ -33,5 +33,5 @@ provider "aws" {
 
 # Documentation: https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/vpc
 resource "aws_vpc" "changeme_aws_vpc_remote_backend" {
-    cidr_block = "10.1.0.0/16"
+  cidr_block = "10.1.0.0/16"
 }
