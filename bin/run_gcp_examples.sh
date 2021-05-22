@@ -15,9 +15,9 @@ do
   echo "================================================================================"
   echo -n "Checking folder: ${folder} ... "
   pushd "${folder}" >/dev/null
-  echo -n "./run.sh"
+  echo -n " ./run.sh ... "
   ./run.sh
-  echo -n "./destroy.sh"
+  echo -n " ./destroy.sh ... "
   ./destroy.sh
   popd >/dev/null
 done

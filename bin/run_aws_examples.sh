@@ -10,16 +10,16 @@ source bin/get_aws_folders.sh
 for folder in ${AWS_FOLDERS}
 do
   echo "================================================================================"
-  echo -n "Checking folder: ${folder} ... "
+  echo -n "$0 checking folder: ${folder} ... "
   if [[ -a ${folder}/.skiptest ]]
   then
     echo -n "found .skiptest file, skipping "
     continue
   fi
   pushd "${folder}" >/dev/null
-  echo -n "./run.sh"
+  echo -n " ./run.sh ... "
   ./run.sh
-  echo -n "./destroy.sh"
+  echo -n " ./destroy.sh ... "
   ./destroy.sh
   popd >/dev/null
 done
